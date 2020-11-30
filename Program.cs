@@ -1,4 +1,5 @@
 ﻿using System;
+using Boad;
 
 namespace xadrez
 {
@@ -6,7 +7,8 @@ namespace xadrez
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var pos = new Position(1, 4);
+            System.Console.WriteLine(pos);
         }
     }
 }
