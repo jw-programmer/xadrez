@@ -4,7 +4,7 @@ namespace Boad
     {
         public int row { get; set; }
         public int column { get; set; }
-        
+
         public Position(int row, int column)
         {
             this.row = row;
@@ -15,5 +15,5 @@ namespace Boad
         {
             return $"{row}, {column}";
         }
-    }   
+    }
 }
