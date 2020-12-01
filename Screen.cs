@@ -1,10 +1,10 @@
-using Boad;
+using Board;
 
 namespace xadrez.Screen
 {
     class ChessConsole
     {
-        public static void PrintChessBoad(ChessBoad boad)
+        public static void PrintChessBoard(ChessBoard boad)
         {
             for (int i = 0; i < boad.Rows; i++)
             {
