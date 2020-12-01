@@ -15,5 +15,9 @@ namespace Board
             this.boad = boad;
             QtdeMoves = 0;
         }
+
+        public void AddMovePiece(){
+            QtdeMoves++;
+        }
     }
 }

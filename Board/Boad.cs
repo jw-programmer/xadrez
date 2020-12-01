@@ -33,6 +33,17 @@ namespace Board
             piece.position = pos;
         }
 
+        public Piece DropPiece(Position pos){
+            if(piece(pos) == null)
+            {
+                return null;
+            }
+            Piece aux = piece(pos);
+            aux.position = null;
+            Pieces[pos.row, pos.column] = null;
+            return aux;
+        }
+
         public bool HavePiece(Position pos)
         {
             ValidPosition(pos);
