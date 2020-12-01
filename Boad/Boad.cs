@@ -17,5 +17,10 @@ namespace Boad
         {
             return Pieces[row, column];
         }
+
+        public void PlacePiece(Piece piece, Position pos){
+            Pieces[pos.row, pos.column] = piece;
+            piece.position = pos;
+        }
     }
 }

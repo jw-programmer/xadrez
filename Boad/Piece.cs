@@ -8,9 +8,9 @@ namespace Boad
         public int QtdeMoves { get; protected set; }
         public ChessBoad boad { get; protected set; }
 
-        public Piece(Position position, Color color, ChessBoad boad)
+        public Piece(Color color, ChessBoad boad)
         {
-            this.position = position;
+            this.position = null;
             this.color = color;
             this.boad = boad;
             QtdeMoves = 0;
