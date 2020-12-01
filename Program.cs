@@ -13,15 +13,21 @@ namespace xadrez
             {
                 var board = new ChessBoard(8, 8);
 
-            board.PlacePiece(new King(board, Color.Black), new Position(0,0));
-            board.PlacePiece(new Rook(board, Color.Black), new Position(1,3));
-            board.PlacePiece(new Rook(board, Color.Black), new Position(2,4));
-            board.PlacePiece(new King(board, Color.White), new Position(0,0));
+                board.PlacePiece(new King(board, Color.Black), new Position(0, 0));
+                board.PlacePiece(new Rook(board, Color.Black), new Position(1, 3));
+                board.PlacePiece(new Rook(board, Color.Black), new Position(2, 4));
+                board.PlacePiece(new King(board, Color.White), new Position(0, 7));
 
-            ChessConsole.PrintChessBoard(board);
-            var pos = new Position(1, 4);
-            System.Console.WriteLine(pos);
-            }catch(BoardException e)
+                ChessConsole.PrintChessBoard(board);
+                var pos = new Position(1, 4);
+                System.Console.WriteLine(pos);
+                
+                // ChessPosition pos = new ChessPosition('c',7);
+                // System.Console.WriteLine(pos);
+
+                // System.Console.WriteLine(pos.ToPosition());
+            }
+            catch (BoardException e)
             {
                 System.Console.WriteLine(e.Message);
             }
