@@ -12,9 +12,19 @@ namespace xadrez
             try
             {
                 var match = new ChessMatch();
-                ChessConsole.PrintChessBoard(match.Board);
-                var pos = new Position(1, 4);
-                System.Console.WriteLine(pos);
+                while(!match.Finish)
+                {
+                    Console.Clear();
+                    ChessConsole.PrintChessBoard(match.Board);
+
+                    Console.Write("Digite a posição: ");
+                    Position origin = ChessConsole.ReadChessPositon().ToPosition();
+
+                    Console.Write("Digite o Destino: ");
+                    Position destiny = ChessConsole.ReadChessPositon().ToPosition();
+
+                    match.ExecMove(origin, destiny);
+                }
                 
                 // ChessPosition pos = new ChessPosition('c',7);
                 // System.Console.WriteLine(pos);

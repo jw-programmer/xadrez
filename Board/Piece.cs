@@ -1,23 +1,25 @@
 namespace Board
 {
-    public class Piece
+    public abstract class Piece
     {
 
         public Position position { get; set; }
         public Color color { get; protected set; }
         public int QtdeMoves { get; protected set; }
-        public ChessBoard boad { get; protected set; }
+        public ChessBoard board { get; protected set; }
 
         public Piece(Color color, ChessBoard boad)
         {
             this.position = null;
             this.color = color;
-            this.boad = boad;
+            this.board = boad;
             QtdeMoves = 0;
         }
 
         public void AddMovePiece(){
             QtdeMoves++;
         }
+
+        public abstract bool[,] PosibleMoves();
     }
 }
