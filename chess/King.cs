@@ -16,49 +16,49 @@ namespace Chess
             bool[,] mat = new bool[board.Rows, board.Columns];
             Position pos = new Position(0, 0);
             //acima
-            pos.SetValues(pos.row - 1, position.column);
+            pos.SetValues(pos.row - 1, pos.column);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //ne
-            pos.SetValues(pos.row - 1, position.column + 1);
+            pos.SetValues(pos.row - 1, pos.column + 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //direita
-            pos.SetValues(pos.row, position.column + 1);
+            pos.SetValues(pos.row, pos.column + 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //se
-            pos.SetValues(pos.row + 1, position.column + 1);
+            pos.SetValues(pos.row + 1, pos.column + 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //abaixo
-            pos.SetValues(pos.row - 1, position.column - 1);
+            pos.SetValues(pos.row - 1, pos.column - 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //so
-            pos.SetValues(pos.row + 1, position.column - 1);
+            pos.SetValues(pos.row + 1, pos.column - 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //esquerda
-            pos.SetValues(pos.row, position.column - 1);
+            pos.SetValues(pos.row, pos.column - 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
             }
             //no
-            pos.SetValues(pos.row + 1, position.column - 1);
+            pos.SetValues(pos.row + 1, pos.column - 1);
             if (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;

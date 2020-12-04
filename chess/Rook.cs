@@ -17,7 +17,7 @@ namespace Chess
             bool[,] mat = new bool[board.Rows, board.Columns];
             Position pos = new Position(0, 0);
             //acima
-            pos.SetValues(pos.row - 1, position.column);
+            pos.SetValues(pos.row - 1, pos.column);
             while (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
@@ -28,7 +28,7 @@ namespace Chess
                 pos.row = pos.row - 1;
             }
             //direita
-            pos.SetValues(pos.row, position.column + 1);
+            pos.SetValues(pos.row, pos.column + 1);
             while (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
@@ -39,7 +39,7 @@ namespace Chess
                 pos.row = pos.column + 1;
             }
             //abaixo
-            pos.SetValues(pos.row + 1, position.column);
+            pos.SetValues(pos.row + 1, pos.column);
             while (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
@@ -50,7 +50,7 @@ namespace Chess
                 pos.row = pos.row + 1;
             }
             //esquerda
-            pos.SetValues(pos.row, position.column - 1);
+            pos.SetValues(pos.row, pos.column - 1);
             while (board.PositionIsValid(pos) && CanMove(pos))
             {
                 mat[pos.row, pos.column] = true;
